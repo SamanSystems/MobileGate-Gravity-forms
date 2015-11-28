@@ -2730,7 +2730,7 @@ class GFMobileGate {
 	
 
 		$Authority = intval($result->Authority);
-		$USSDCODE = '*770*97*2*'.$Authority.'#';
+		$USSDCODE = '*720*97*2*'.$Authority.'#';
 		$size = $config["meta"]["size_qr"] ? $config["meta"]["size_qr"] : 200;
 	
 	
@@ -2741,7 +2741,7 @@ class GFMobileGate {
 			$QR  = '<span class="ussd_qr_text">برای پرداخت از طریق تلفن همراه کد زیر را شماره گیری فرمایید  :</span><br/>';
 		}
 		
-		$USSD = '<br/><span class="ussd_qr_au">'.$Authority.'#*2*97*770*</span></br></br>';
+		$USSD = '<br/><span class="ussd_qr_au">'.$Authority.'#*2*97*720*</span></br></br>';
 		$USSD .= '<class="ussd_qr_check">بعد از پرداخت از طریق تلفن همراه برروی دکمه زیر برای بررسی وضعیت تراکنش کلیک نمایید .</span><br/><br/>';
 
 		
@@ -3157,7 +3157,7 @@ class GFMobileGate {
 	if ( $entry["payment_status"] == "Processing" && $au != '-1' ){	
 	
 		$Authority = $au;
-		$USSDCODE = '*770*97*2*'.$Authority.'#';
+		$USSDCODE = '*720*97*2*'.$Authority.'#';
 		$CallbackURL = self::check_url($form["id"], $entry["id"]);
 		$size = $config["meta"]["size_qr"] ? $config["meta"]["size_qr"] : 200;
 		
@@ -3170,7 +3170,7 @@ class GFMobileGate {
 		else {
 			$USSD  .= '<span class="ussd_qr_text">برای پرداخت از طریق تلفن همراه کد زیر را شماره گیری فرمایید  :</span><br/>';	
 		}
-		$USSD .= '<br/><span class="ussd_qr_au">'.$Authority.'#*2*97*770*</span></br></br>';
+		$USSD .= '<br/><span class="ussd_qr_au">'.$Authority.'#*2*97*720*</span></br></br>';
 		$USSD .= '<class="ussd_qr_check">بعد از پرداخت از طریق تلفن همراه برروی دکمه زیر برای بررسی وضعیت تراکنش کلیک نمایید .</span><br/><br/>';
 
 		
